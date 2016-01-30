@@ -1,1 +1,20 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>今天去哪儿吃</title>
+    <script src="http://static.hdslb.com/live-static/libs/jquery/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+        function pickRand() {
+            $.getJSON("restaurants", function (data) {
+                var pick=Math.floor(data.length*(Math.random()));
+                $("#choice").html(data[pick]);
+            });
+        }
+    </script>
+</head>
+<body>
+<div id="choice"></div>
+<button onclick="pickRand()">随机</button>
+</body>
+</html>
