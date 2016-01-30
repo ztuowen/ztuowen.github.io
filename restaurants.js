@@ -16,4 +16,7 @@ data=[{name:"Tosh拉面",open:[0,3,4,5,6],detail:"default"},
     {name:"CrownBurger",open:[0,1,2,3,4,5,6],detail:"default"},
     {name:"EvenStevens",open:[0,1,2,3,4,5,6],detail:"default"},
     {name:"神厨",open:[0,1,2,3,4,5,6],detail:"default"},
+    {name:"Mahider",open:[0,1,2,3,4,5,6],detail:"default"},
+    {name:"BlueNile",open:[0,1,2,3,4,5,6],detail:"default"},
+    {name:"Kyoto",open:[0,1,2,3,4,5,6],detail:"default"},
     {name:"台湾菜",open:[0,1,2,3,4,5,6],detail:"default"}];
