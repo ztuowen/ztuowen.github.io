@@ -7,8 +7,14 @@
     <script type="text/javascript">
         function pickRand() {
             $.getJSON("restaurants", function (data) {
-                var pick=Math.floor(data.length*(Math.random()));
-                $("#choice").html(data[pick]);
+                var pick;
+                var d = new Date().getDay();
+                pick=Math.floor(data.length*(Math.random()));
+                while ($.inArray(d,data[pick].open)<0)
+                    pick=Math.floor(data.length*(Math.random()));
+                $.get( "description/"+data[pick].detail, function( desc ) {
+                    $("#choice").html(data[pick].name+desc);
+                });
             });
         }
     </script>
