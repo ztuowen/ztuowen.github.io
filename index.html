@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <title>今天去哪儿吃</title>
     <script src="http://static.hdslb.com/live-static/libs/jquery/jquery-1.11.3.min.js"></script>
+    <script src="restaurants.js"></script>
     <script type="text/javascript">
         function pickRand() {
-            $.getJSON("restaurants", function (data) {
-                var pick;
-                var d = new Date().getDay();
-                pick=Math.floor(data.length*(Math.random()));
-                while ($.inArray(d,data[pick].open)<0)
-                    pick=Math.floor(data.length*(Math.random()));
-                $.get( "description/"+data[pick].detail, function( desc ) {
-                    $("#choice").html(data[pick].name+desc);
-                });
+            var pick;
+            var d = new Date().getDay();
+            pick = Math.floor(data.length * (Math.random()));
+            while ($.inArray(d, data[pick].open) < 0)
+                pick = Math.floor(data.length * (Math.random()));
+            $.get("description/" + data[pick].detail, function (desc) {
+                $("#choice").html(data[pick].name + desc);
             });
         }
     </script>
